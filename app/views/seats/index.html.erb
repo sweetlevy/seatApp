@@ -1,0 +1,12 @@
+<h1>Choose your seating style.</h1>
+
+<h3><%= link_to "+ Choose New Seat", new_seat_path %></h3>
+
+<%= form_tag "/", method: "GET" do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<br/><br/>
+
+<%= render 'list' %>
